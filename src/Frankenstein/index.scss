@@ -6,691 +6,691 @@ $orange: #ee8e38;
 	background: white;
 	width: 100%;
 	display: flex;
-}
 
-.box {
-	position: relative;
-	margin: auto;
-	display: block;
-	/*optional background or border*/
-	// border: solid 4px red;
-	width: 630px;
-	height: 700px;
-	background: none;
-}
-
-.yellow-canvas {
-	position: absolute;
-	top: 2.5%;
-	left: 7.5%;
-	width: 83%;
-	height: 70%;
-	background: $yellow;
-	border: solid 6px $green;
-	border-radius: 50%;
-}
-.black-canvas {
-	position: absolute;
-	top: 17.5%;
-	left: 14%;
-	width: 70%;
-	height: 76.5%;
-	background: black;
-	border: solid 6px $green;
-	border-radius: 30%;
-}
-
-//write the classes after you have finished with the face
-.orange-canvas {
-	position: absolute;
-	top: 70.5%;
-	left: 29.5%;
-	width: 40%;
-	height: 16.5%;
-	background: $orange;
-	border: solid 5px black;
-	border-radius: 30%;
-	z-index: -1;
-}
-.black-round-canvas {
-	position: absolute;
-	top: 81.5%;
-	left: 19%;
-	width: 60%;
-	height: 26.5%;
-	background: black;
-	border: solid 8px $green;
-	border-radius: 50%;
-}
-
-.face {
-	position: absolute;
-	top: -15%;
-	left: 21.5%;
-	width: 55%;
-	height: 116.5%;
-	background: $green;
-	border: solid 6px black;
-	border-radius: 30%;
-}
-.face-copy {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: $green;
-	border-radius: 30%;
-	z-index: 1;
-}
-
-.hair {
-	position: absolute;
-	top: -5%;
-	left: 0.5%;
-	width: 94%;
-	height: 40.5%;
-	background: black;
-	border: solid 6px black;
-	border-radius: 30%;
-	z-index: 2;
-	-webkit-clip-path: polygon(
-		0% 0%,
-		0% 62%,
-		15% 41%,
-		28% 67%,
-		39% 44%,
-		41% 55%,
-		57% 24%,
-		63% 63%,
-		72% 34%,
-		87% 57%,
-		82% 17%,
-		99% 67%,
-		100% 0%
-	);
-	clip-path: polygon(
-		0% 0%,
-		0% 62%,
-		15% 41%,
-		28% 67%,
-		39% 44%,
-		41% 55%,
-		57% 24%,
-		63% 63%,
-		72% 34%,
-		87% 57%,
-		82% 17%,
-		99% 67%,
-		100% 0%
-	);
-}
-
-.wound-horizontal-line {
-	position: absolute;
-	top: 25%;
-	left: 21%;
-	width: 54%;
-	height: 0.5%;
-	background: black;
-	border: solid 6px black;
-	border-radius: 30%;
-	z-index: 2;
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(170deg);
-}
-
-.wound-vertical-line-left {
-	position: absolute;
-	top: 22%;
-	left: 45%;
-	width: 0%;
-	height: 8%;
-	background: black;
-	border: solid 5px black;
-	border-radius: 30%;
-	z-index: 2;
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(170deg);
-}
-.wound-vertical-line-middle {
-	position: absolute;
-	top: 20%;
-	left: 55%;
-	width: 0%;
-	height: 10%;
-	background: black;
-	border: solid 5px black;
-	border-radius: 30%;
-	z-index: 2;
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(170deg);
-}
-.wound-vertical-line-right {
-	position: absolute;
-	top: 20%;
-	left: 65%;
-	width: 0%;
-	height: 8%;
-	background: black;
-	border: solid 5px black;
-	border-radius: 30%;
-	z-index: 2;
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(170deg);
-}
-
-.ear-left {
-	position: absolute;
-	top: 29%;
-	left: -20.5%;
-	width: 28%;
-	height: 16.5%;
-	background: $green;
-	border: solid 6px black;
-	border-radius: 30%;
-
-	-ms-transform: rotate(190deg); /* IE 9 */
-	-webkit-transform: rotate(190deg); /* Chrome, Safari, Opera */
-	transform: rotate(190deg);
-}
-.ear-right {
-	position: absolute;
-	top: 29%;
-	right: -20.5%;
-	width: 28%;
-	height: 16.5%;
-	background: $green;
-	border: solid 6px black;
-	border-radius: 30%;
-
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(170deg);
-}
-
-.eye-left-orange {
-	position: absolute;
-	top: 44%;
-	left: 17%;
-	width: 29%;
-	height: 16.5%;
-	background: $orange;
-	border-bottom: solid 9px black;
-	border-left: solid 3px black;
-	border-right: solid 4px black;
-	border-top: solid 2px black;
-	border-radius: 50%;
-	z-index: 2;
-}
-.eye-right-orange {
-	position: absolute;
-	top: 44%;
-	right: 17%;
-	width: 29%;
-	height: 16.5%;
-	background: $orange;
-	border-bottom: solid 9px black;
-	border-left: solid 3px black;
-	border-right: solid 4px black;
-	border-top: solid 2px black;
-	border-radius: 50%;
-	z-index: 2;
-}
-
-.eye-yellow {
-	position: absolute;
-	top: 5%;
-	left: 15%;
-	width: 49%;
-	height: 46.5%;
-	background: $yellow;
-	border-bottom: solid 9px black;
-	border-left: solid 3px black;
-	border-right: solid 4px black;
-	border-top: solid 2px black;
-	border-radius: 50%;
-}
-.pupil {
-	position: absolute;
-	top: 25%;
-	left: 21%;
-	width: 49%;
-	height: 40.5%;
-	background: black;
-	border-bottom: solid 9px black;
-	border-left: solid 3px black;
-	border-right: solid 4px black;
-	border-top: solid 2px black;
-	border-radius: 50%;
-}
-
-.brow {
-	position: absolute;
-	top: 29%;
-	left: 10%;
-	width: 79%;
-	height: 20.5%;
-	background: black;
-	border-bottom: solid 6px black;
-	z-index: 2;
-
-	-webkit-clip-path: polygon(
-		0% 47%,
-		28% 87%,
-		55% 57%,
-		75% 72%,
-		100% 47%,
-		76% 57%,
-		53% 46%,
-		29% 68%
-	);
-	clip-path: polygon(
-		0% 47%,
-		28% 87%,
-		55% 57%,
-		75% 72%,
-		100% 47%,
-		76% 57%,
-		53% 46%,
-		29% 68%
-	);
-}
-
-.nose-line {
-	position: absolute;
-	top: 59%;
-	left: 33%;
-	width: 32%;
-	height: 25.5%;
-	background: none;
-	border-bottom: solid 8px black;
-	border-left: solid 4px black;
-	border-radius: 40%;
-	z-index: 2;
-}
-
-//the shape is the same code as nose
-.mouth {
-	position: absolute;
-	top: 66%;
-	left: 7%;
-	width: 72%;
-	height: 25.5%;
-	background: none;
-	border-bottom: solid 6px black;
-	border-left: solid 17px black;
-	border-right: solid 17px black;
-	border-radius: 50%;
-	z-index: 2;
-
-	-webkit-clip-path: polygon(50% 0%, 19% 100%, 83% 100%);
-	clip-path: polygon(50% 0%, 19% 100%, 83% 100%);
-}
-
-.screw-small {
-	position: absolute;
-	top: 66%;
-	left: -28%;
-	width: 150%;
-	height: 10%;
-	background: $green;
-	border: solid 6px black;
-	border-radius: 10%;
-
-	//write this at the end
-	animation: spinMe 5s 5;
-}
-.screw-big-left {
-	position: absolute;
-	top: -38%;
-	left: -8%;
-	width: 15%;
-	height: 160%;
-	background: $green;
-	border: solid 6px black;
-	border-radius: 10%;
-	z-index: 1;
-}
-.screw-big-right {
-	position: absolute;
-	top: -38%;
-	right: -8%;
-	width: 15%;
-	height: 160%;
-	background: $green;
-	border: solid 6px black;
-	border-radius: 10%;
-	z-index: 1;
-}
-
-//css animations
-//animation of spinMe
-
-@keyframes spinMe {
-	0% {
-		//for 0sec
-		left: 20%;
-		background: orangered;
-		transition: all 0.2s ease-in-out;
+	.box {
+		position: relative;
+		margin: auto;
+		display: block;
+		/*optional background or border*/
+		// border: solid 4px red;
+		width: 630px;
+		height: 700px;
+		background: none;
 	}
-	100% {
-		//for all sec
-		right: 20%;
-		background: #e9b87a;
-		transform: scale(1.3);
+
+	.yellow-canvas {
+		position: absolute;
+		top: 2.5%;
+		left: 7.5%;
+		width: 83%;
+		height: 70%;
+		background: $yellow;
+		border: solid 6px $green;
+		border-radius: 50%;
 	}
-}
+	.black-canvas {
+		position: absolute;
+		top: 17.5%;
+		left: 14%;
+		width: 70%;
+		height: 76.5%;
+		background: black;
+		border: solid 6px $green;
+		border-radius: 30%;
+	}
 
-//for the orange canvas
-.black-line {
-	position: absolute;
-	top: 72%;
-	left: 50%;
-	width: 0%;
-	height: 10%;
-	background: black;
-	border: solid 6px black;
-	border-radius: 10%;
-	z-index: 1;
-}
+	//write the classes after you have finished with the face
+	.orange-canvas {
+		position: absolute;
+		top: 70.5%;
+		left: 29.5%;
+		width: 40%;
+		height: 16.5%;
+		background: $orange;
+		border: solid 5px black;
+		border-radius: 30%;
+		z-index: -1;
+	}
+	.black-round-canvas {
+		position: absolute;
+		top: 81.5%;
+		left: 19%;
+		width: 60%;
+		height: 26.5%;
+		background: black;
+		border: solid 8px $green;
+		border-radius: 50%;
+	}
 
-//for the black round canvas
-.knee-left {
-	position: absolute;
-	top: -26%;
-	left: 13%;
-	width: 40%;
-	height: 40%;
-	background: $green;
-	border: solid 6px $green;
-	border-radius: 0%;
-	z-index: 1;
-	-webkit-clip-path: circle(50% at 50% 100%);
-	clip-path: circle(50% at 50% 100%);
-}
-.knee-right {
-	position: absolute;
-	top: -26%;
-	right: 13%;
-	width: 40%;
-	height: 40%;
-	background: $green;
-	border: solid 6px $green;
-	border-radius: 0%;
-	z-index: 1;
-	-webkit-clip-path: circle(50% at 50% 100%);
-	clip-path: circle(50% at 50% 100%);
-}
+	.face {
+		position: absolute;
+		top: -15%;
+		left: 21.5%;
+		width: 55%;
+		height: 116.5%;
+		background: $green;
+		border: solid 6px black;
+		border-radius: 30%;
+	}
+	.face-copy {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: $green;
+		border-radius: 30%;
+		z-index: 1;
+	}
 
-.inner-knee {
-	position: absolute;
-	top: 0%;
-	left: 2%;
-	width: 85%;
-	height: 85%;
-	background: black;
-	border: solid 6px $green;
-	z-index: 1;
-	-webkit-clip-path: circle(50% at 50% 100%);
-	clip-path: circle(50% at 50% 100%);
-}
+	.hair {
+		position: absolute;
+		top: -5%;
+		left: 0.5%;
+		width: 94%;
+		height: 40.5%;
+		background: black;
+		border: solid 6px black;
+		border-radius: 30%;
+		z-index: 2;
+		-webkit-clip-path: polygon(
+			0% 0%,
+			0% 62%,
+			15% 41%,
+			28% 67%,
+			39% 44%,
+			41% 55%,
+			57% 24%,
+			63% 63%,
+			72% 34%,
+			87% 57%,
+			82% 17%,
+			99% 67%,
+			100% 0%
+		);
+		clip-path: polygon(
+			0% 0%,
+			0% 62%,
+			15% 41%,
+			28% 67%,
+			39% 44%,
+			41% 55%,
+			57% 24%,
+			63% 63%,
+			72% 34%,
+			87% 57%,
+			82% 17%,
+			99% 67%,
+			100% 0%
+		);
+	}
 
-.spot-left {
-	position: absolute;
-	top: 40%;
-	left: 39%;
-	width: 42%;
-	height: 42%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	.wound-horizontal-line {
+		position: absolute;
+		top: 25%;
+		left: 21%;
+		width: 54%;
+		height: 0.5%;
+		background: black;
+		border: solid 6px black;
+		border-radius: 30%;
+		z-index: 2;
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(170deg);
+	}
 
-	-webkit-clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
-	clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
+	.wound-vertical-line-left {
+		position: absolute;
+		top: 22%;
+		left: 45%;
+		width: 0%;
+		height: 8%;
+		background: black;
+		border: solid 5px black;
+		border-radius: 30%;
+		z-index: 2;
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(170deg);
+	}
+	.wound-vertical-line-middle {
+		position: absolute;
+		top: 20%;
+		left: 55%;
+		width: 0%;
+		height: 10%;
+		background: black;
+		border: solid 5px black;
+		border-radius: 30%;
+		z-index: 2;
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(170deg);
+	}
+	.wound-vertical-line-right {
+		position: absolute;
+		top: 20%;
+		left: 65%;
+		width: 0%;
+		height: 8%;
+		background: black;
+		border: solid 5px black;
+		border-radius: 30%;
+		z-index: 2;
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(170deg);
+	}
 
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(30deg);
-}
-.spot-right {
-	position: absolute;
-	top: 40%;
-	right: 39%;
-	width: 42%;
-	height: 42%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	.ear-left {
+		position: absolute;
+		top: 29%;
+		left: -20.5%;
+		width: 28%;
+		height: 16.5%;
+		background: $green;
+		border: solid 6px black;
+		border-radius: 30%;
 
-	-webkit-clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
-	clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
+		-ms-transform: rotate(190deg); /* IE 9 */
+		-webkit-transform: rotate(190deg); /* Chrome, Safari, Opera */
+		transform: rotate(190deg);
+	}
+	.ear-right {
+		position: absolute;
+		top: 29%;
+		right: -20.5%;
+		width: 28%;
+		height: 16.5%;
+		background: $green;
+		border: solid 6px black;
+		border-radius: 30%;
 
-	-ms-transform: rotate(170deg); /* IE 9 */
-	-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
-	transform: rotate(160deg);
-}
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(170deg);
+	}
 
-.keyboard-1 {
-	position: absolute;
-	top: 30%;
-	left: 19%;
-	width: 10%;
-	height: 8%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	.eye-left-orange {
+		position: absolute;
+		top: 44%;
+		left: 17%;
+		width: 29%;
+		height: 16.5%;
+		background: $orange;
+		border-bottom: solid 9px black;
+		border-left: solid 3px black;
+		border-right: solid 4px black;
+		border-top: solid 2px black;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.eye-right-orange {
+		position: absolute;
+		top: 44%;
+		right: 17%;
+		width: 29%;
+		height: 16.5%;
+		background: $orange;
+		border-bottom: solid 9px black;
+		border-left: solid 3px black;
+		border-right: solid 4px black;
+		border-top: solid 2px black;
+		border-radius: 50%;
+		z-index: 2;
+	}
 
-	-webkit-clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-	clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-}
-.keyboard-2 {
-	position: absolute;
-	top: 30%;
-	left: 29%;
-	width: 10%;
-	height: 8%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	.eye-yellow {
+		position: absolute;
+		top: 5%;
+		left: 15%;
+		width: 49%;
+		height: 46.5%;
+		background: $yellow;
+		border-bottom: solid 9px black;
+		border-left: solid 3px black;
+		border-right: solid 4px black;
+		border-top: solid 2px black;
+		border-radius: 50%;
+	}
+	.pupil {
+		position: absolute;
+		top: 25%;
+		left: 21%;
+		width: 49%;
+		height: 40.5%;
+		background: black;
+		border-bottom: solid 9px black;
+		border-left: solid 3px black;
+		border-right: solid 4px black;
+		border-top: solid 2px black;
+		border-radius: 50%;
+	}
 
-	-webkit-clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-	clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-}
-.keyboard-3 {
-	position: absolute;
-	top: 30%;
-	left: 39%;
-	width: 10%;
-	height: 8%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	.brow {
+		position: absolute;
+		top: 29%;
+		left: 10%;
+		width: 79%;
+		height: 20.5%;
+		background: black;
+		border-bottom: solid 6px black;
+		z-index: 2;
 
-	-webkit-clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-	clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-}
-.keyboard-4 {
-	position: absolute;
-	top: 30%;
-	left: 49%;
-	width: 10%;
-	height: 8%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+		-webkit-clip-path: polygon(
+			0% 47%,
+			28% 87%,
+			55% 57%,
+			75% 72%,
+			100% 47%,
+			76% 57%,
+			53% 46%,
+			29% 68%
+		);
+		clip-path: polygon(
+			0% 47%,
+			28% 87%,
+			55% 57%,
+			75% 72%,
+			100% 47%,
+			76% 57%,
+			53% 46%,
+			29% 68%
+		);
+	}
 
-	-webkit-clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-	clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-}
-.keyboard-5 {
-	position: absolute;
-	top: 30%;
-	left: 59%;
-	width: 10%;
-	height: 8%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	.nose-line {
+		position: absolute;
+		top: 59%;
+		left: 33%;
+		width: 32%;
+		height: 25.5%;
+		background: none;
+		border-bottom: solid 8px black;
+		border-left: solid 4px black;
+		border-radius: 40%;
+		z-index: 2;
+	}
 
-	-webkit-clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-	clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-}
-.keyboard-6 {
-	position: absolute;
-	top: 30%;
-	left: 69%;
-	width: 10%;
-	height: 8%;
-	background: $green;
-	border: solid 6px $green;
-	z-index: 1;
+	//the shape is the same code as nose
+	.mouth {
+		position: absolute;
+		top: 66%;
+		left: 7%;
+		width: 72%;
+		height: 25.5%;
+		background: none;
+		border-bottom: solid 6px black;
+		border-left: solid 17px black;
+		border-right: solid 17px black;
+		border-radius: 50%;
+		z-index: 2;
 
-	-webkit-clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-	clip-path: polygon(
-		50% 0,
-		0% 100%,
-		13% 100%,
-		50% 25%,
-		47% 22%,
-		86% 100%,
-		0 100%,
-		4% 100%,
-		100% 100%,
-		50% 0
-	);
-}
+		-webkit-clip-path: polygon(50% 0%, 19% 100%, 83% 100%);
+		clip-path: polygon(50% 0%, 19% 100%, 83% 100%);
+	}
 
-.green-line {
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	width: 2%;
-	height: 21%;
-	background: $green;
-	border-radius: 10%;
-	z-index: 1;
+	.screw-small {
+		position: absolute;
+		top: 66%;
+		left: -28%;
+		width: 150%;
+		height: 10%;
+		background: $green;
+		border: solid 6px black;
+		border-radius: 10%;
+
+		//write this at the end
+		animation: spinMe 5s 5;
+	}
+	.screw-big-left {
+		position: absolute;
+		top: -38%;
+		left: -8%;
+		width: 15%;
+		height: 160%;
+		background: $green;
+		border: solid 6px black;
+		border-radius: 10%;
+		z-index: 1;
+	}
+	.screw-big-right {
+		position: absolute;
+		top: -38%;
+		right: -8%;
+		width: 15%;
+		height: 160%;
+		background: $green;
+		border: solid 6px black;
+		border-radius: 10%;
+		z-index: 1;
+	}
+
+	//css animations
+	//animation of spinMe
+
+	@keyframes spinMe {
+		0% {
+			//for 0sec
+			left: 20%;
+			background: orangered;
+			transition: all 0.2s ease-in-out;
+		}
+		100% {
+			//for all sec
+			right: 20%;
+			background: #e9b87a;
+			transform: scale(1.3);
+		}
+	}
+
+	//for the orange canvas
+	.black-line {
+		position: absolute;
+		top: 72%;
+		left: 50%;
+		width: 0%;
+		height: 10%;
+		background: black;
+		border: solid 6px black;
+		border-radius: 10%;
+		z-index: 1;
+	}
+
+	//for the black round canvas
+	.knee-left {
+		position: absolute;
+		top: -26%;
+		left: 13%;
+		width: 40%;
+		height: 40%;
+		background: $green;
+		border: solid 6px $green;
+		border-radius: 0%;
+		z-index: 1;
+		-webkit-clip-path: circle(50% at 50% 100%);
+		clip-path: circle(50% at 50% 100%);
+	}
+	.knee-right {
+		position: absolute;
+		top: -26%;
+		right: 13%;
+		width: 40%;
+		height: 40%;
+		background: $green;
+		border: solid 6px $green;
+		border-radius: 0%;
+		z-index: 1;
+		-webkit-clip-path: circle(50% at 50% 100%);
+		clip-path: circle(50% at 50% 100%);
+	}
+
+	.inner-knee {
+		position: absolute;
+		top: 0%;
+		left: 2%;
+		width: 85%;
+		height: 85%;
+		background: black;
+		border: solid 6px $green;
+		z-index: 1;
+		-webkit-clip-path: circle(50% at 50% 100%);
+		clip-path: circle(50% at 50% 100%);
+	}
+
+	.spot-left {
+		position: absolute;
+		top: 40%;
+		left: 39%;
+		width: 42%;
+		height: 42%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
+		clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
+
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(30deg);
+	}
+	.spot-right {
+		position: absolute;
+		top: 40%;
+		right: 39%;
+		width: 42%;
+		height: 42%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
+		clip-path: polygon(29% 14%, 87% 46%, 30% 84%, 49% 48%);
+
+		-ms-transform: rotate(170deg); /* IE 9 */
+		-webkit-transform: rotate(170deg); /* Chrome, Safari, Opera */
+		transform: rotate(160deg);
+	}
+
+	.keyboard-1 {
+		position: absolute;
+		top: 30%;
+		left: 19%;
+		width: 10%;
+		height: 8%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+		clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+	}
+	.keyboard-2 {
+		position: absolute;
+		top: 30%;
+		left: 29%;
+		width: 10%;
+		height: 8%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+		clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+	}
+	.keyboard-3 {
+		position: absolute;
+		top: 30%;
+		left: 39%;
+		width: 10%;
+		height: 8%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+		clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+	}
+	.keyboard-4 {
+		position: absolute;
+		top: 30%;
+		left: 49%;
+		width: 10%;
+		height: 8%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+		clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+	}
+	.keyboard-5 {
+		position: absolute;
+		top: 30%;
+		left: 59%;
+		width: 10%;
+		height: 8%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+		clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+	}
+	.keyboard-6 {
+		position: absolute;
+		top: 30%;
+		left: 69%;
+		width: 10%;
+		height: 8%;
+		background: $green;
+		border: solid 6px $green;
+		z-index: 1;
+
+		-webkit-clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+		clip-path: polygon(
+			50% 0,
+			0% 100%,
+			13% 100%,
+			50% 25%,
+			47% 22%,
+			86% 100%,
+			0 100%,
+			4% 100%,
+			100% 100%,
+			50% 0
+		);
+	}
+
+	.green-line {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		width: 2%;
+		height: 21%;
+		background: $green;
+		border-radius: 10%;
+		z-index: 1;
+	}
 }

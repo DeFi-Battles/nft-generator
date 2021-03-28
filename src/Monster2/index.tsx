@@ -2,7 +2,7 @@ import './index.scss';
 
 export const Monster2: React.FC = () => {
 	return (
-		<div className="wrapper">
+		<div className="Monster2-wrapper">
 			<div className="box">
 				<div className="body">
 					<div className="eye-left">

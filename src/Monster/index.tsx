@@ -2,7 +2,7 @@ import './index.scss';
 
 export const Monster: React.FC = () => {
 	return (
-		<div className="full-wrapper">
+		<div className="Monster-wrapper">
 			<div className="box">
 				<div className="body" /> {/* end of body */}
 				{/* ears */}

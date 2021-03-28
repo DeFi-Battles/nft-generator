@@ -23,736 +23,736 @@ $spots: #987d2e;
 $tognue: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 $tognue-spots: #991b1e;
 
-.full-wrapper {
+.Monster-wrapper {
 	background: $bg-color;
-  width: 100%;
-  display: flex;
-}
+	width: 100%;
+	display: flex;
 
-.box {
-	position: relative;
-	margin: auto;
-	display: block;
-	/*optional background or border*/
-	//border: solid 4px red;
-	width: 630px;
-	height: 500px;
-	background: none;
-}
+	.box {
+		position: relative;
+		margin: auto;
+		display: block;
+		/*optional background or border*/
+		//border: solid 4px red;
+		width: 630px;
+		height: 500px;
+		background: none;
+	}
 
-.body {
-	position: absolute;
-	top: 5%;
-	left: 25%;
-	width: 55%;
-	height: 85%;
-	background: $body;
-	border-radius: 40%;
-	//need this for the hands
-	z-index: 1;
+	.body {
+		position: absolute;
+		top: 5%;
+		left: 25%;
+		width: 55%;
+		height: 85%;
+		background: $body;
+		border-radius: 40%;
+		//need this for the hands
+		z-index: 1;
 
-	-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-	clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}
+		-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+	}
 
-.ear-left {
-	position: absolute;
-	top: -5%;
-	left: 29%;
-	width: 20%;
-	height: 30%;
-	background: $ears;
-	border-radius: 50%;
-	z-index: 2;
+	.ear-left {
+		position: absolute;
+		top: -5%;
+		left: 29%;
+		width: 20%;
+		height: 30%;
+		background: $ears;
+		border-radius: 50%;
+		z-index: 2;
 
-	-ms-transform: rotate(-30deg);
-	-webkit-transform: rotate(-30deg);
-	transform: rotate(-30deg);
+		-ms-transform: rotate(-30deg);
+		-webkit-transform: rotate(-30deg);
+		transform: rotate(-30deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
 
-.ear-right {
-	position: absolute;
-	top: -5%;
-	right: 24%;
-	width: 20%;
-	height: 30%;
-	background: $ears;
-	border-radius: 50%;
-	z-index: 2;
+	.ear-right {
+		position: absolute;
+		top: -5%;
+		right: 24%;
+		width: 20%;
+		height: 30%;
+		background: $ears;
+		border-radius: 50%;
+		z-index: 2;
 
-	-ms-transform: rotate(30deg);
-	-webkit-transform: rotate(30deg);
-	transform: rotate(30deg);
+		-ms-transform: rotate(30deg);
+		-webkit-transform: rotate(30deg);
+		transform: rotate(30deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
 
-.ear-left-spot-1 {
-	position: absolute;
-	top: 5%;
-	left: 35%;
-	width: 20%;
-	height: 30%;
-	background: $ears-border;
-	border-radius: 50%;
+	.ear-left-spot-1 {
+		position: absolute;
+		top: 5%;
+		left: 35%;
+		width: 20%;
+		height: 30%;
+		background: $ears-border;
+		border-radius: 50%;
 
-	-ms-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-.ear-left-spot-2 {
-	position: absolute;
-	top: 25%;
-	left: 30%;
-	width: 20%;
-	height: 30%;
-	background: $ears-border;
-	border-radius: 50%;
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+	.ear-left-spot-2 {
+		position: absolute;
+		top: 25%;
+		left: 30%;
+		width: 20%;
+		height: 30%;
+		background: $ears-border;
+		border-radius: 50%;
 
-	-ms-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-.ear-left-spot-3 {
-	position: absolute;
-	top: 55%;
-	left: 30%;
-	width: 20%;
-	height: 50%;
-	background: $ears-border;
-	border-radius: 50%;
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+	.ear-left-spot-3 {
+		position: absolute;
+		top: 55%;
+		left: 30%;
+		width: 20%;
+		height: 50%;
+		background: $ears-border;
+		border-radius: 50%;
 
-	-ms-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
 
-.ear-right-spot-1 {
-	position: absolute;
-	top: 5%;
-	right: 35%;
-	width: 20%;
-	height: 30%;
-	background: $ears-border;
-	border-radius: 50%;
+	.ear-right-spot-1 {
+		position: absolute;
+		top: 5%;
+		right: 35%;
+		width: 20%;
+		height: 30%;
+		background: $ears-border;
+		border-radius: 50%;
 
-	-ms-transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-.ear-right-spot-2 {
-	position: absolute;
-	top: 25%;
-	right: 30%;
-	width: 20%;
-	height: 30%;
-	background: $ears-border;
-	border-radius: 50%;
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+	.ear-right-spot-2 {
+		position: absolute;
+		top: 25%;
+		right: 30%;
+		width: 20%;
+		height: 30%;
+		background: $ears-border;
+		border-radius: 50%;
 
-	-ms-transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-.ear-right-spot-3 {
-	position: absolute;
-	top: 55%;
-	right: 30%;
-	width: 20%;
-	height: 50%;
-	background: $ears-border;
-	border-radius: 50%;
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+	.ear-right-spot-3 {
+		position: absolute;
+		top: 55%;
+		right: 30%;
+		width: 20%;
+		height: 50%;
+		background: $ears-border;
+		border-radius: 50%;
 
-	-ms-transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
 
-.eye-left {
-	position: absolute;
-	top: 26%;
-	left: 37%;
-	width: 12%;
-	height: 14%;
-	background: $eye;
-	border: solid 12px $white;
-	border-radius: 50%;
-	z-index: 1;
-}
+	.eye-left {
+		position: absolute;
+		top: 26%;
+		left: 37%;
+		width: 12%;
+		height: 14%;
+		background: $eye;
+		border: solid 12px $white;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-.eye-left:hover,
-.eye-right:hover {
-	transform: scale(1.1);
-	background: $hover-eye;
-}
+	.eye-left:hover,
+	.eye-right:hover {
+		transform: scale(1.1);
+		background: $hover-eye;
+	}
 
-.eye-right {
-	position: absolute;
-	top: 26%;
-	right: 32%;
-	width: 12%;
-	height: 14%;
-	background: $eye;
-	border: solid 12px $white;
-	border-radius: 50%;
-	z-index: 1;
-}
-.inner-eye {
-	position: absolute;
-	top: 20%;
-	left: 21%;
-	width: 62%;
-	height: 64%;
-	background: $inner-eye;
-	border-radius: 50%;
-}
-.pupil-1 {
-	position: absolute;
-	top: 27%;
-	left: -4%;
-	width: 19%;
-	height: 19%;
-	background: $white;
-	border-radius: 50%;
-}
-.pupil-2 {
-	position: absolute;
-	top: 13%;
-	left: 17%;
-	width: 25%;
-	height: 25%;
-	background: $white;
-	border-radius: 50%;
-}
+	.eye-right {
+		position: absolute;
+		top: 26%;
+		right: 32%;
+		width: 12%;
+		height: 14%;
+		background: $eye;
+		border: solid 12px $white;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.inner-eye {
+		position: absolute;
+		top: 20%;
+		left: 21%;
+		width: 62%;
+		height: 64%;
+		background: $inner-eye;
+		border-radius: 50%;
+	}
+	.pupil-1 {
+		position: absolute;
+		top: 27%;
+		left: -4%;
+		width: 19%;
+		height: 19%;
+		background: $white;
+		border-radius: 50%;
+	}
+	.pupil-2 {
+		position: absolute;
+		top: 13%;
+		left: 17%;
+		width: 25%;
+		height: 25%;
+		background: $white;
+		border-radius: 50%;
+	}
 
-/////////
-// hands
-////////
+	/////////
+	// hands
+	////////
 
-.hand-left {
-	position: absolute;
-	top: 34%;
-	left: 12%;
-	width: 30%;
-	height: 12%;
-	background: $hand;
-	border-radius: 50%;
+	.hand-left {
+		position: absolute;
+		top: 34%;
+		left: 12%;
+		width: 30%;
+		height: 12%;
+		background: $hand;
+		border-radius: 50%;
 
-	-ms-transform: rotate(30deg);
-	-webkit-transform: rotate(30deg);
-	transform: rotate(30deg);
-}
-.hand-right {
-	position: absolute;
-	top: 34%;
-	right: 9%;
-	width: 30%;
-	height: 12%;
-	background: $hand;
-	border-radius: 50%;
+		-ms-transform: rotate(30deg);
+		-webkit-transform: rotate(30deg);
+		transform: rotate(30deg);
+	}
+	.hand-right {
+		position: absolute;
+		top: 34%;
+		right: 9%;
+		width: 30%;
+		height: 12%;
+		background: $hand;
+		border-radius: 50%;
 
-	-ms-transform: rotate(-30deg);
-	-webkit-transform: rotate(-30deg);
-	transform: rotate(-30deg);
-}
+		-ms-transform: rotate(-30deg);
+		-webkit-transform: rotate(-30deg);
+		transform: rotate(-30deg);
+	}
 
-.hand-toe-left-1 {
-	position: absolute;
-	top: 0%;
-	left: 9%;
-	width: 50%;
-	height: 72%;
-	background: $hand;
-	border-radius: 50%;
+	.hand-toe-left-1 {
+		position: absolute;
+		top: 0%;
+		left: 9%;
+		width: 50%;
+		height: 72%;
+		background: $hand;
+		border-radius: 50%;
 
-	-ms-transform: rotate(35deg);
-	-webkit-transform: rotate(35deg);
-	transform: rotate(35deg);
-}
-.hand-toe-left-2 {
-	position: absolute;
-	top: 30%;
-	left: 9%;
-	width: 50%;
-	height: 72%;
-	background: $hand;
-	border-radius: 50%;
+		-ms-transform: rotate(35deg);
+		-webkit-transform: rotate(35deg);
+		transform: rotate(35deg);
+	}
+	.hand-toe-left-2 {
+		position: absolute;
+		top: 30%;
+		left: 9%;
+		width: 50%;
+		height: 72%;
+		background: $hand;
+		border-radius: 50%;
 
-	-ms-transform: rotate(-35deg);
-	-webkit-transform: rotate(-35deg);
-	transform: rotate(-35deg);
-}
+		-ms-transform: rotate(-35deg);
+		-webkit-transform: rotate(-35deg);
+		transform: rotate(-35deg);
+	}
 
-.hand-toe-right-1 {
-	position: absolute;
-	top: 0%;
-	right: 9%;
-	width: 50%;
-	height: 72%;
-	background: $hand;
-	border-radius: 50%;
+	.hand-toe-right-1 {
+		position: absolute;
+		top: 0%;
+		right: 9%;
+		width: 50%;
+		height: 72%;
+		background: $hand;
+		border-radius: 50%;
 
-	-ms-transform: rotate(-35deg);
-	-webkit-transform: rotate(-35deg);
-	transform: rotate(-35deg);
-}
-.hand-toe-right-2 {
-	position: absolute;
-	top: 30%;
-	right: 9%;
-	width: 50%;
-	height: 72%;
-	background: $hand;
-	border-radius: 50%;
+		-ms-transform: rotate(-35deg);
+		-webkit-transform: rotate(-35deg);
+		transform: rotate(-35deg);
+	}
+	.hand-toe-right-2 {
+		position: absolute;
+		top: 30%;
+		right: 9%;
+		width: 50%;
+		height: 72%;
+		background: $hand;
+		border-radius: 50%;
 
-	-ms-transform: rotate(35deg);
-	-webkit-transform: rotate(35deg);
-	transform: rotate(35deg);
-}
+		-ms-transform: rotate(35deg);
+		-webkit-transform: rotate(35deg);
+		transform: rotate(35deg);
+	}
 
-//mouth
-.mouth {
-	position: absolute;
-	top: 49%;
-	left: 38%;
-	width: 30%;
-	height: 32%;
-	background: $black;
-	z-index: 1;
+	//mouth
+	.mouth {
+		position: absolute;
+		top: 49%;
+		left: 38%;
+		width: 30%;
+		height: 32%;
+		background: $black;
+		z-index: 1;
 
-	-webkit-clip-path: circle(50% at 50% 4%);
-	clip-path: circle(50% at 50% 4%);
-}
-.mouth-copy {
-	position: absolute;
-	top: -9%;
-	left: 6%;
-	width: 70%;
-	height: 42%;
-	background: $body;
-	z-index: 1;
+		-webkit-clip-path: circle(50% at 50% 4%);
+		clip-path: circle(50% at 50% 4%);
+	}
+	.mouth-copy {
+		position: absolute;
+		top: -9%;
+		left: 6%;
+		width: 70%;
+		height: 42%;
+		background: $body;
+		z-index: 1;
 
-	-webkit-clip-path: circle(50% at 50% 4%);
-	clip-path: circle(50% at 50% 4%);
-}
-.tognue {
-	position: absolute;
-	top: 23%;
-	left: 10%;
-	width: 80%;
-	height: 42%;
-	background: $tognue;
-	z-index: 1;
+		-webkit-clip-path: circle(50% at 50% 4%);
+		clip-path: circle(50% at 50% 4%);
+	}
+	.tognue {
+		position: absolute;
+		top: 23%;
+		left: 10%;
+		width: 80%;
+		height: 42%;
+		background: $tognue;
+		z-index: 1;
 
-	-webkit-clip-path: circle(50% at 50% 98%);
-	clip-path: circle(50% at 50% 98%);
-}
+		-webkit-clip-path: circle(50% at 50% 98%);
+		clip-path: circle(50% at 50% 98%);
+	}
 
-.tognue-spot-1 {
-	position: absolute;
-	top: 23%;
-	left: 40%;
-	width: 7%;
-	height: 10%;
-	background: $tognue-spots;
-	border-radius: 50%;
-	z-index: 1;
-}
-.tognue-spot-2 {
-	position: absolute;
-	top: 13%;
-	left: 50%;
-	width: 5%;
-	height: 8%;
-	background: $tognue-spots;
-	border-radius: 50%;
-	z-index: 1;
-}
-.tognue-spot-3 {
-	position: absolute;
-	top: 33%;
-	left: 20%;
-	width: 7%;
-	height: 10%;
-	background: $tognue-spots;
-	border-radius: 50%;
-	z-index: 1;
-}
-.tognue-spot-4 {
-	position: absolute;
-	top: 43%;
-	left: 25%;
-	width: 4%;
-	height: 7%;
-	background: $tognue-spots;
-	border-radius: 50%;
-	z-index: 1;
-}
+	.tognue-spot-1 {
+		position: absolute;
+		top: 23%;
+		left: 40%;
+		width: 7%;
+		height: 10%;
+		background: $tognue-spots;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.tognue-spot-2 {
+		position: absolute;
+		top: 13%;
+		left: 50%;
+		width: 5%;
+		height: 8%;
+		background: $tognue-spots;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.tognue-spot-3 {
+		position: absolute;
+		top: 33%;
+		left: 20%;
+		width: 7%;
+		height: 10%;
+		background: $tognue-spots;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.tognue-spot-4 {
+		position: absolute;
+		top: 43%;
+		left: 25%;
+		width: 4%;
+		height: 7%;
+		background: $tognue-spots;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-.tooth-1 {
-	position: absolute;
-	top: 0%;
-	left: 4%;
-	width: 10%;
-	height: 16%;
-	background: $white;
-	z-index: 1;
+	.tooth-1 {
+		position: absolute;
+		top: 0%;
+		left: 4%;
+		width: 10%;
+		height: 16%;
+		background: $white;
+		z-index: 1;
 
-	-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
-	clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
-}
-.tooth-2 {
-	position: absolute;
-	top: 0%;
-	left: 70%;
-	width: 10%;
-	height: 16%;
-	background: $white;
-	z-index: 1;
+		-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+		clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+	}
+	.tooth-2 {
+		position: absolute;
+		top: 0%;
+		left: 70%;
+		width: 10%;
+		height: 16%;
+		background: $white;
+		z-index: 1;
 
-	-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
-	clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
-}
-.tooth-3 {
-	position: absolute;
-	top: 0%;
-	left: 80%;
-	width: 10%;
-	height: 16%;
-	background: $white;
-	z-index: 1;
+		-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+		clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+	}
+	.tooth-3 {
+		position: absolute;
+		top: 0%;
+		left: 80%;
+		width: 10%;
+		height: 16%;
+		background: $white;
+		z-index: 1;
 
-	-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
-	clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
-}
+		-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+		clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%);
+	}
 
-.belly {
-	position: absolute;
-	top: 69%;
-	left: 38%;
-	width: 30%;
-	height: 16%;
-	background: $belly;
-	border-radius: 50%;
-	z-index: 1;
-}
+	.belly {
+		position: absolute;
+		top: 69%;
+		left: 38%;
+		width: 30%;
+		height: 16%;
+		background: $belly;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-//spots
-.spot-body-1 {
-	position: absolute;
-	top: 29%;
-	left: 33%;
-	width: 3%;
-	height: 6%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-body-2 {
-	position: absolute;
-	top: 39%;
-	left: 36%;
-	width: 2%;
-	height: 3%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-body-3 {
-	position: absolute;
-	top: 25%;
-	right: 29%;
-	width: 3%;
-	height: 6%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-body-4 {
-	position: absolute;
-	top: 43%;
-	left: 34%;
-	width: 3%;
-	height: 6%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-body-5 {
-	position: absolute;
-	top: 69%;
-	left: 73%;
-	width: 3%;
-	height: 4%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-body-6 {
-	position: absolute;
-	top: 62%;
-	left: 70%;
-	width: 3%;
-	height: 4%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-body-7 {
-	position: absolute;
-	top: 64%;
-	left: 73%;
-	width: 3%;
-	height: 4%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
+	//spots
+	.spot-body-1 {
+		position: absolute;
+		top: 29%;
+		left: 33%;
+		width: 3%;
+		height: 6%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-body-2 {
+		position: absolute;
+		top: 39%;
+		left: 36%;
+		width: 2%;
+		height: 3%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-body-3 {
+		position: absolute;
+		top: 25%;
+		right: 29%;
+		width: 3%;
+		height: 6%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-body-4 {
+		position: absolute;
+		top: 43%;
+		left: 34%;
+		width: 3%;
+		height: 6%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-body-5 {
+		position: absolute;
+		top: 69%;
+		left: 73%;
+		width: 3%;
+		height: 4%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-body-6 {
+		position: absolute;
+		top: 62%;
+		left: 70%;
+		width: 3%;
+		height: 4%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-body-7 {
+		position: absolute;
+		top: 64%;
+		left: 73%;
+		width: 3%;
+		height: 4%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
 
-.foot-left {
-	position: absolute;
-	top: 78%;
-	left: 31%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
-.foot-right {
-	position: absolute;
-	top: 78%;
-	right: 28%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
+	.foot-left {
+		position: absolute;
+		top: 78%;
+		left: 31%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.foot-right {
+		position: absolute;
+		top: 78%;
+		right: 28%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-.foot-toe-left-1 {
-	position: absolute;
-	bottom: 78%;
-	left: 28%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
-.foot-toe-left-2 {
-	position: absolute;
-	bottom: 78%;
-	left: 48%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
-.foot-toe-left-3 {
-	position: absolute;
-	bottom: 78%;
-	left: 68%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
+	.foot-toe-left-1 {
+		position: absolute;
+		bottom: 78%;
+		left: 28%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.foot-toe-left-2 {
+		position: absolute;
+		bottom: 78%;
+		left: 48%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.foot-toe-left-3 {
+		position: absolute;
+		bottom: 78%;
+		left: 68%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-.foot-toe-right-1 {
-	position: absolute;
-	bottom: 78%;
-	right: 28%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
-.foot-toe-right-2 {
-	position: absolute;
-	bottom: 78%;
-	right: 48%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
-.foot-toe-right-3 {
-	position: absolute;
-	bottom: 78%;
-	right: 68%;
-	width: 20%;
-	height: 26%;
-	background: $hand;
-	border-radius: 50%;
-	z-index: 1;
-}
+	.foot-toe-right-1 {
+		position: absolute;
+		bottom: 78%;
+		right: 28%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.foot-toe-right-2 {
+		position: absolute;
+		bottom: 78%;
+		right: 48%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.foot-toe-right-3 {
+		position: absolute;
+		bottom: 78%;
+		right: 68%;
+		width: 20%;
+		height: 26%;
+		background: $hand;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-//spots left
-.spot-foot-left-1 {
-	position: absolute;
-	top: 64%;
-	left: 63%;
-	width: 23%;
-	height: 24%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-left-2 {
-	position: absolute;
-	top: 44%;
-	left: 53%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-left-3 {
-	position: absolute;
-	top: 34%;
-	left: 63%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-left-4 {
-	position: absolute;
-	top: 14%;
-	left: 33%;
-	width: 9%;
-	height: 9%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-left-5 {
-	position: absolute;
-	top: 40%;
-	left: 23%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-left-6 {
-	position: absolute;
-	top: 64%;
-	left: 13%;
-	width: 10%;
-	height: 10%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-left-7 {
-	position: absolute;
-	top: 2%;
-	left: 72%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
+	//spots left
+	.spot-foot-left-1 {
+		position: absolute;
+		top: 64%;
+		left: 63%;
+		width: 23%;
+		height: 24%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-left-2 {
+		position: absolute;
+		top: 44%;
+		left: 53%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-left-3 {
+		position: absolute;
+		top: 34%;
+		left: 63%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-left-4 {
+		position: absolute;
+		top: 14%;
+		left: 33%;
+		width: 9%;
+		height: 9%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-left-5 {
+		position: absolute;
+		top: 40%;
+		left: 23%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-left-6 {
+		position: absolute;
+		top: 64%;
+		left: 13%;
+		width: 10%;
+		height: 10%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-left-7 {
+		position: absolute;
+		top: 2%;
+		left: 72%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
 
-//spots right
-.spot-foot-right-1 {
-	position: absolute;
-	top: 34%;
-	right: 61%;
-	width: 20%;
-	height: 20%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-right-2 {
-	position: absolute;
-	top: 44%;
-	right: 53%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-right-3 {
-	position: absolute;
-	top: 34%;
-	right: 33%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-right-4 {
-	position: absolute;
-	top: 4%;
-	right: 33%;
-	width: 9%;
-	height: 9%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-right-5 {
-	position: absolute;
-	top: 80%;
-	right: 23%;
-	width: 13%;
-	height: 14%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-right-6 {
-	position: absolute;
-	top: 64%;
-	right: 13%;
-	width: 10%;
-	height: 10%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
-}
-.spot-foot-right-7 {
-	position: absolute;
-	top: 12%;
-	right: 72%;
-	width: 7%;
-	height: 7%;
-	background: $spots;
-	border-radius: 50%;
-	z-index: 2;
+	//spots right
+	.spot-foot-right-1 {
+		position: absolute;
+		top: 34%;
+		right: 61%;
+		width: 20%;
+		height: 20%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-right-2 {
+		position: absolute;
+		top: 44%;
+		right: 53%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-right-3 {
+		position: absolute;
+		top: 34%;
+		right: 33%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-right-4 {
+		position: absolute;
+		top: 4%;
+		right: 33%;
+		width: 9%;
+		height: 9%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-right-5 {
+		position: absolute;
+		top: 80%;
+		right: 23%;
+		width: 13%;
+		height: 14%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-right-6 {
+		position: absolute;
+		top: 64%;
+		right: 13%;
+		width: 10%;
+		height: 10%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.spot-foot-right-7 {
+		position: absolute;
+		top: 12%;
+		right: 72%;
+		width: 7%;
+		height: 7%;
+		background: $spots;
+		border-radius: 50%;
+		z-index: 2;
+	}
 }

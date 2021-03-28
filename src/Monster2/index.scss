@@ -1,0 +1,327 @@
+$BG-color: #feffff; /*light grey */
+$blue: rgba(0, 158, 253, 1); //blue
+$green: rgba(42, 245, 152, 1); //green
+
+$main-color: linear-gradient(
+	180deg,
+	rgba(42, 245, 152, 1) 0%,
+	rgba(0, 158, 253, 1) 100%
+);
+$dark-blue: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+$dark-blue-left: linear-gradient(
+	to left,
+	#3ab5b0 0%,
+	#3d99be 31%,
+	#56317a 100%
+);
+$dark-blue-top: linear-gradient(
+	to bottom,
+	#3ab5b0 0%,
+	#3d99be 21%,
+	#56317a 100%
+);
+
+.wrapper {
+	background: $BG-color;
+}
+
+.title {
+	text-align: center;
+}
+
+.box {
+	position: relative;
+	margin: auto;
+	display: block;
+	/*optional background or border*/
+	//border: solid 4px red;
+	margin-top: 2%;
+	width: 600px;
+	height: 420px;
+	background: none;
+}
+
+.body {
+	position: absolute;
+	top: 22%;
+	left: 27%;
+	width: 46%;
+	height: 70%;
+	background: $main-color;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border-bottom-left-radius: 40%;
+	border-bottom-right-radius: 40%;
+}
+//eyes
+.eye-left {
+	position: absolute;
+	top: 16%;
+	left: 24%;
+	width: 26%;
+	height: 26%;
+	background: white;
+	border-radius: 50%;
+	border-left: solid 5px $green;
+	border-bottom: solid 5px $green;
+}
+.eye-right {
+	position: absolute;
+	top: 16%;
+	right: 24%;
+	width: 26%;
+	height: 26%;
+	background: white;
+	border-radius: 50%;
+	border-right: solid 5px $green;
+	border-bottom: solid 5px $green;
+}
+
+.inner-eye {
+	position: absolute;
+	top: 26%;
+	left: 24%;
+	width: 37%;
+	height: 33%;
+	background: $dark-blue;
+	border-radius: 50%;
+	border: solid 5px $blue;
+}
+.pupil-1 {
+	position: absolute;
+	top: 52%;
+	left: 35%;
+	width: 9%;
+	height: 9%;
+	background: white;
+	border-radius: 50%;
+}
+.pupil-2 {
+	position: absolute;
+	top: 35%;
+	right: 35%;
+	width: 12%;
+	height: 12%;
+	background: $blue;
+	border-radius: 50%;
+}
+
+//hair
+.hair-1 {
+	position: absolute;
+	top: -14%;
+	left: 39%;
+	width: 16%;
+	height: 16%;
+	background: $green;
+
+	-webkit-clip-path: polygon(16% 14%, 0% 100%, 100% 100%);
+	clip-path: polygon(16% 14%, 0% 100%, 100% 100%);
+}
+.hair-2 {
+	position: absolute;
+	top: -14%;
+	left: 41%;
+	width: 16%;
+	height: 16%;
+	background: $green;
+
+	-webkit-clip-path: polygon(72% 0, 0% 100%, 100% 100%);
+	clip-path: polygon(72% 0, 0% 100%, 100% 100%);
+}
+.hair-3 {
+	position: absolute;
+	top: -14%;
+	left: 44%;
+	width: 16%;
+	height: 16%;
+	background: $green;
+
+	-webkit-clip-path: polygon(95% 20%, 0% 100%, 100% 100%);
+	clip-path: polygon(95% 20%, 0% 100%, 100% 100%);
+}
+
+//eye-brows
+.brow-1 {
+	position: absolute;
+	top: 4%;
+	left: 26%;
+	width: 10%;
+	height: 22%;
+	background: $dark-blue;
+	transform: rotate(55deg);
+	-webkit-clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%);
+	clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%);
+}
+.brow-2 {
+	position: absolute;
+	top: 4%;
+	right: 26%;
+	width: 10%;
+	height: 22%;
+	background: $dark-blue-left;
+	transform: rotate(-55deg);
+	-webkit-clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%);
+	clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%);
+}
+
+//mouth
+.mouth {
+	position: absolute;
+	top: 51%;
+	left: 22%;
+	width: 56%;
+	height: 36%;
+	background: $dark-blue-top;
+	border-radius: 50%;
+
+	-webkit-clip-path: circle(50% at 50% 5%);
+	clip-path: circle(50% at 50% 5%);
+}
+.tognue {
+	position: absolute;
+	top: 21%;
+	left: 22%;
+	width: 56%;
+	height: 47%;
+	background: $green;
+
+	-webkit-clip-path: circle(50% at 50% 5%);
+	clip-path: circle(50% at 50% 100%);
+}
+.tooth-1 {
+	position: absolute;
+	top: 27%;
+	left: 10%;
+	width: 17%;
+	height: 37%;
+	background: white;
+	transform: rotate(15deg);
+	//as it is from the clippy tool
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.tooth-2 {
+	position: absolute;
+	top: 27%;
+	right: 10%;
+	width: 17%;
+	height: 37%;
+	background: white;
+	transform: rotate(-15deg);
+	//as it is from the clippy tool
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+//ears
+.ear-left {
+	position: absolute;
+	top: -13%;
+	left: -6%;
+	width: 17%;
+	height: 37%;
+	background: $blue;
+	transform: rotate(-35deg);
+	z-index: -1;
+	//as it is from the clippy tool
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.ear-right {
+	position: absolute;
+	top: -13%;
+	right: -6%;
+	width: 17%;
+	height: 37%;
+	background: $blue;
+	transform: rotate(35deg);
+	z-index: -1;
+	//as it is from the clippy tool
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.line-1 {
+	position: absolute;
+	top: 15%;
+	left: 6%;
+	width: 77%;
+	height: 15%;
+	background: $green;
+}
+.line-2 {
+	position: absolute;
+	top: 45%;
+	left: 6%;
+	width: 77%;
+	height: 15%;
+	background: $green;
+}
+.line-3 {
+	position: absolute;
+	top: 75%;
+	left: 6%;
+	width: 87%;
+	height: 15%;
+	background: $green;
+}
+//hand
+.hand {
+	position: absolute;
+	top: 55%;
+	left: 16%;
+	width: 69%;
+	height: 37%;
+	background: none;
+	z-index: -1;
+	border-radius: 50%;
+	border-top: solid 35px $blue;
+}
+.toe-left {
+	position: absolute;
+	top: 21%;
+	left: 1%;
+	width: 3%;
+	height: 13%;
+	background: $blue;
+	border-radius: 50%;
+	transform: rotate(180deg);
+	//as it is, triangle
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.toe-right {
+	position: absolute;
+	top: 21%;
+	right: 1%;
+	width: 3%;
+	height: 13%;
+	background: $blue;
+	border-radius: 50%;
+	transform: rotate(180deg);
+	//as it is, triangle
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.leg-left {
+	position: absolute;
+	top: 90%;
+	left: 36%;
+	width: 13%;
+	height: 7%;
+	background: $main-color;
+	z-index: -1;
+	border-radius: 50%;
+}
+.leg-right {
+	position: absolute;
+	top: 90%;
+	right: 36%;
+	width: 13%;
+	height: 7%;
+	background: $main-color;
+	z-index: -1;
+	border-radius: 50%;
+}

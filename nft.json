@@ -1,0 +1,10 @@
+{
+	"name": "Frank",
+	"description": "New Franky",
+	"animation_url": "https://ipfs.io/ipfs/bafkreib2iubrvrsnmehqt2eoa63uypw4juxadv4rex4fjd6vm55sia62zy",
+	"attributes": [
+		{
+			"strength": 300
+		}
+	]
+}

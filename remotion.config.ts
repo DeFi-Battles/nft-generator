@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import {Config} from 'remotion';
+import {Config, WebpackConfiguration} from 'remotion';
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = (relativePath: string) =>
@@ -11,6 +11,12 @@ Config.Output.setImageSequence(false);
 Config.Rendering.setImageFormat('jpeg');
 
 Config.Bundling.overrideWebpackConfig((currentConfiguration) => {
+	return WebpackOverrideFxn(currentConfiguration);
+});
+
+export const WebpackOverrideFxn = (
+	currentConfiguration: WebpackConfiguration
+): WebpackConfiguration => {
 	return {
 		...currentConfiguration,
 		module: {
@@ -43,4 +49,4 @@ Config.Bundling.overrideWebpackConfig((currentConfiguration) => {
 			],
 		},
 	};
-});
+};

@@ -13,12 +13,17 @@ import {
 } from '@remotion/renderer';
 import express from 'express';
 import fs from 'fs';
+import { NFTStorage, Blob } from 'nft.storage'
 import os from 'os';
 import path from 'path';
+import {WebpackOverrideFxn} from './remotion.config';
+import { NFT_STORAGE_API_KEY } from './secrets';
+
+const client = new NFTStorage({token: NFT_STORAGE_API_KEY});
 
 const app = express();
 const port = 8000;
-const compositionId = 'HelloWorld';
+const compositionId = 'Frankenstein';
 
 const cache = new Map<string, string>();
 
@@ -30,18 +35,30 @@ app.get('/', async (req, res) => {
 				res.end();
 			});
 	};
+	const uploadToIPFS = async (file: string) => {
+		const data = await fs.promises.readFile(file)
+		const cid = await client.storeBlob(new Blob([data]))
+		console.log(cid);
+		res.send({cid});
+	};
 	try {
-		if (cache.get(JSON.stringify(req.query))) {
-			sendFile(cache.get(JSON.stringify(req.query)) as string);
-			return;
-		}
-		const bundled = await bundle(path.join(__dirname, './src/index.tsx'));
+		// if (cache.get(JSON.stringify(req.query))) {
+		// 	sendFile(cache.get(JSON.stringify(req.query)) as string);
+		// 	return;
+		// }
+		const bundled = await bundle(
+			path.join(__dirname, './src/index.tsx'),
+			(progress) => console.log(progress),
+			{
+				webpackOverride: (currentConfig) => WebpackOverrideFxn(currentConfig),
+			}
+		);
 		const comps = await getCompositions(bundled);
 		const video = comps.find((c) => c.id === compositionId);
 		if (!video) {
 			throw new Error(`No video called ${compositionId}`);
 		}
-		res.set('content-type', 'video/mp4');
+		res.set('content-type', 'application/json');
 
 		const tmpDir = await fs.promises.mkdtemp(
 			path.join(os.tmpdir(), 'remotion-')
@@ -73,7 +90,8 @@ app.get('/', async (req, res) => {
 			imageFormat: 'jpeg',
 		});
 		cache.set(JSON.stringify(req.query), finalOutput);
-		sendFile(finalOutput);
+		// sendFile(finalOutput);
+		uploadToIPFS(finalOutput);
 		console.log('Video rendered and sent!');
 	} catch (err) {
 		console.error(err);

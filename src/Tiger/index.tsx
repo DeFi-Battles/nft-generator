@@ -1,20 +1,32 @@
+import {allElementColors} from '../../constants';
 import './index.scss';
 
-export const Tiger: React.FC = () => {
+export const Tiger: React.FC<{
+	colors: Record<string, number>;
+	element: string;
+}> = ({colors, element}) => {
+	const elemColors = allElementColors[element];
+	const color1 = elemColors[colors.color1 % elemColors.length];
+	const color2 = elemColors[colors.color2 % elemColors.length];
+	const color3 = elemColors[colors.color3 % elemColors.length];
+
 	return (
-		<div className="tiger-wrapper">
+		<div className="tiger-wrapper" style={{backgroundColor: color3}}>
 			<div className="box">
 				{/* Circular Head*/}
 				<div className="head">
 					{/* Circular Head Copy */}
-					<div className="head-copy" />
+					<div className="head-copy" style={{backgroundColor: color1}} />
 					<div className="orange-head">
-						<div className="orange-head-copy" />
+						<div
+							className="orange-head-copy"
+							style={{backgroundColor: color1, border: `${color1} 1px solid`}}
+						/>
 					</div>
 					<div className="white-head" />
 					<div className="chin" />
 					{/* Left Ear*/}
-					<div className="ear-left">
+					<div className="ear-left" style={{backgroundColor: color2}}>
 						{/* Inner ear */}
 						<div className="inner-ear-shadow" />
 						<div className="inner-ear" />
@@ -23,7 +35,7 @@ export const Tiger: React.FC = () => {
 						<div className="ear-line-3" />
 					</div>
 					{/* Right Ear */}
-					<div className="ear-right">
+					<div className="ear-right" style={{backgroundColor: color2}}>
 						{/* Inner Ear */}
 						<div className="inner-ear-shadow" />
 						<div className="inner-ear" />

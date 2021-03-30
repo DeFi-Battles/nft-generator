@@ -1,14 +1,22 @@
+import {allElementColors} from '../../constants';
 import './index.scss';
 
-export const Frankenstein: React.FC = () => {
+export const Frankenstein: React.FC<{
+	colors: Record<string, number>;
+	element: string;
+}> = ({colors, element}) => {
+	const elemColors = allElementColors[element];
+	const color1 = elemColors[colors.color1 % elemColors.length];
+	const color2 = elemColors[colors.color2 % elemColors.length];
+	const color3 = elemColors[colors.color3 % elemColors.length];
 
 	return (
-		<div className="frank-wrapper">
+		<div className="frank-wrapper" style={{backgroundColor: color3}}>
 			<div className="box">
 				<div className="yellow-canvas">
-					<div className="black-canvas">
+					<div className="black-canvas" style={{backgroundColor: color2}}>
 						<div className="face">
-							<div className="face-copy" />
+							<div className="face-copy" style={{backgroundColor: color1}} />
 							<div className="hair" />
 							<div className="wound-horizontal-line" />
 							<div className="wound-vertical-line-left" />

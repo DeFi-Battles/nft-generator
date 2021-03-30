@@ -4,7 +4,6 @@
  * If you don't want to render videos on a server, you can safely
  * delete this file.
  */
-
 import {bundle} from '@remotion/bundler';
 import {
 	getCompositions,
@@ -13,11 +12,13 @@ import {
 } from '@remotion/renderer';
 import express from 'express';
 import fs from 'fs';
-import { NFTStorage, Blob } from 'nft.storage'
+import {Blob, NFTStorage} from 'nft.storage';
 import os from 'os';
 import path from 'path';
+import {NFT} from './constants';
 import {WebpackOverrideFxn} from './remotion.config';
-import { NFT_STORAGE_API_KEY } from './secrets';
+import {NFT_STORAGE_API_KEY} from './secrets';
+import {processDNA, uploadToIPFS} from './service';
 
 const client = new NFTStorage({token: NFT_STORAGE_API_KEY});
 
@@ -28,24 +29,31 @@ const compositionId = 'Frankenstein';
 const cache = new Map<string, string>();
 
 app.get('/', async (req, res) => {
-	const sendFile = (file: string) => {
-		fs.createReadStream(file)
-			.pipe(res)
-			.on('close', () => {
-				res.end();
-			});
-	};
-	const uploadToIPFS = async (file: string) => {
-		const data = await fs.promises.readFile(file)
-		const cid = await client.storeBlob(new Blob([data]))
-		console.log(cid);
-		res.send({cid});
-	};
+	// const sendFile = (file: string) => {
+	// 	fs.createReadStream(file)
+	// 		.pipe(res)
+	// 		.on('close', () => {
+	// 			res.end();
+	// 		});
+	// };
+	// const uploadToIPFS = async (file: string) => {
+	// 	const data = await fs.promises.readFile(file);
+	// 	const cid = await client.storeBlob(new Blob([data]));
+	// 	console.log(cid);
+	// 	res.send({cid});
+	// };
 	try {
 		// if (cache.get(JSON.stringify(req.query))) {
 		// 	sendFile(cache.get(JSON.stringify(req.query)) as string);
 		// 	return;
 		// }
+		const {dna} = req.query;
+		if (!dna) return res.status(400).send('Error Bad Request, send DNA');
+		console.log(typeof dna, dna);
+		const [NFT_INFO, monsterType, element, colors] = processDNA(String(dna));
+		const NFT_DATA = NFT_INFO as NFT;
+		console.log(NFT_INFO, monsterType, element, colors, 'NFT_INFO, colors');
+
 		const bundled = await bundle(
 			path.join(__dirname, './src/index.tsx'),
 			(progress) => console.log(progress),
@@ -74,7 +82,10 @@ app.get('/', async (req, res) => {
 			},
 			parallelism: null,
 			outputDir: tmpDir,
-			userProps: req.query,
+			userProps: {
+				colors,
+				element,
+			},
 			compositionId,
 			imageFormat: 'jpeg',
 		});
@@ -89,9 +100,16 @@ app.get('/', async (req, res) => {
 			outputLocation: finalOutput,
 			imageFormat: 'jpeg',
 		});
-		cache.set(JSON.stringify(req.query), finalOutput);
+		// cache.set(JSON.stringify(req.query), finalOutput);
 		// sendFile(finalOutput);
-		uploadToIPFS(finalOutput);
+		const videoCID: string = await uploadToIPFS(finalOutput);
+		const videoLink = `https://ipfs.io/ipfs/${videoCID}`;
+		NFT_DATA.image = videoLink;
+		const buf = Buffer.from(JSON.stringify(NFT_DATA));
+		const cid = await client.storeBlob(new Blob([buf]));
+		console.log(cid);
+		const cidLink = `https://ipfs.io/ipfs/${cid}`;
+		res.json({cid: cidLink});
 		console.log('Video rendered and sent!');
 	} catch (err) {
 		console.error(err);
@@ -110,7 +128,7 @@ console.log(
 		'',
 		'If you are running Hello World, try this:',
 		'',
-		`http://localhost:${port}?titleText=Hello,+World!&titleColor=red`,
+		`http://localhost:${port}?dna=108596180112682612922228753751472530619048654078310860587450472893954680635717`,
 		'',
 	].join('\n')
 );

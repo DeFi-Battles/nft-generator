@@ -29,27 +29,14 @@ const compositionId = 'Frankenstein';
 const cache = new Map<string, string>();
 
 app.get('/', async (req, res) => {
-	// const sendFile = (file: string) => {
-	// 	fs.createReadStream(file)
-	// 		.pipe(res)
-	// 		.on('close', () => {
-	// 			res.end();
-	// 		});
-	// };
-	// const uploadToIPFS = async (file: string) => {
-	// 	const data = await fs.promises.readFile(file);
-	// 	const cid = await client.storeBlob(new Blob([data]));
-	// 	console.log(cid);
-	// 	res.send({cid});
-	// };
 	try {
-		// if (cache.get(JSON.stringify(req.query))) {
-		// 	sendFile(cache.get(JSON.stringify(req.query)) as string);
-		// 	return;
-		// }
+		if (cache.get(JSON.stringify(req.query))) {
+			const cidLink = cache.get(JSON.stringify(req.query)) as string;
+			res.json({cid: cidLink});
+			return;
+		}
 		const {dna} = req.query;
 		if (!dna) return res.status(400).send('Error Bad Request, send DNA');
-		console.log(typeof dna, dna);
 		const [NFT_INFO, monsterType, element, colors] = processDNA(String(dna));
 		const NFT_DATA = NFT_INFO as NFT;
 		console.log(NFT_INFO, monsterType, element, colors, 'NFT_INFO, colors');
@@ -100,8 +87,6 @@ app.get('/', async (req, res) => {
 			outputLocation: finalOutput,
 			imageFormat: 'jpeg',
 		});
-		// cache.set(JSON.stringify(req.query), finalOutput);
-		// sendFile(finalOutput);
 		const videoCID: string = await uploadToIPFS(finalOutput);
 		const videoLink = `https://ipfs.io/ipfs/${videoCID}`;
 		NFT_DATA.image = videoLink;
@@ -109,8 +94,9 @@ app.get('/', async (req, res) => {
 		const cid = await client.storeBlob(new Blob([buf]));
 		console.log(cid);
 		const cidLink = `https://ipfs.io/ipfs/${cid}`;
+		cache.set(JSON.stringify(req.query), cidLink);
 		res.json({cid: cidLink});
-		console.log('Video rendered and sent!');
+		console.log('NFT Gen with DNA ', dna);
 	} catch (err) {
 		console.error(err);
 		res.json({
@@ -126,7 +112,7 @@ console.log(
 		`The server has started on http://localhost:${port}!`,
 		'You can render a video by passing props as URL parameters.',
 		'',
-		'If you are running Hello World, try this:',
+		'Try this to get first nft',
 		'',
 		`http://localhost:${port}?dna=108596180112682612922228753751472530619048654078310860587450472893954680635717`,
 		'',

@@ -4,7 +4,7 @@
 	"description": "My Remotion video",
 	"scripts": {
 		"start": "remotion preview src/index.tsx",
-		"build": "remotion render src/index.tsx Monster out.mp4",
+		"gen-video": "rimraf out.mp4 && remotion render src/index.tsx Tigris out.mp4",
 		"upgrade": "remotion upgrade",
 		"server": "ts-node server.tsx",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
@@ -31,6 +31,7 @@
 	},
 	"devDependencies": {
 		"node-sass": "^5.0.0",
+		"rimraf": "^3.0.2",
 		"sass-loader": "^11.0.1"
 	}
 }

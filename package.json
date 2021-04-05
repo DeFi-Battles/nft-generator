@@ -7,7 +7,7 @@
 		"gen-video": "rimraf out.mp4 && remotion render src/index.tsx Tigris out.mp4",
 		"upgrade": "remotion upgrade",
 		"server": "ts-node server.tsx",
-		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
+		"test": "ts-node test/dna-gen.ts"
 	},
 	"repository": {},
 	"license": "UNLICENSED",
@@ -23,6 +23,7 @@
 		"nft.storage": "^0.3.10",
 		"prettier": "^2.2.1",
 		"prettier-plugin-organize-imports": "^1.1.1",
+		"random-int": "^2.0.1",
 		"react": "^17.0.1",
 		"remotion": "^1.4.0",
 		"ts-node": "^9.1.1",

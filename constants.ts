@@ -10,13 +10,26 @@ export const allMonstersList = Object.values(Monsters);
 export const allElements = ['fire', 'water', 'grass', 'poison', 'ground'];
 export const allRarity = ['common', 'uncommon', 'rare', 'epic', 'legendary'];
 
-// interface IAllElemColors {
-//   fire: string[];
-//   water: string[];
-//   grass: string[];
-//   poison: string[];
-//   ground: string[];
-// }
+export const allElementAttacks: {[index: string]: string[]} = {
+	fire: ['Ember', 'Blaze Kick', 'Flamethrower', 'Fire Fang', 'Fire Punch'],
+	water: [
+		'Hydro Cannon',
+		'Water Pulse',
+		'Aqua Tail',
+		'Water Gun',
+		'Bubble Beam',
+	],
+	grass: [
+		'Leaf Storm',
+		'Petal Dance',
+		'Solar Beam',
+		'Seed Flare',
+		'Energy Ball',
+	],
+	poison: ['Acid', 'Sludge Bomb', 'Venoshock', 'Toxic Spikes', 'Sludge Wave'],
+	ground: ['Drill Run', 'Mud Bomb', 'Earthquake', 'Spikes', 'Sand Attack'],
+};
+
 export const allElementColors: {[index: string]: string[]} = {
 	fire: ['#8B4537', '#9F4E3E', '#A95342', '#CA6A57', '#D28171'],
 	water: ['#40B1D1', '#2B8AA6', '#319CBA', '#184E5D', '#133D48'],

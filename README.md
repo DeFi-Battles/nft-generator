@@ -1,12 +1,16 @@
-# Remotion video
+# DeFi-Battles - NFT Generator
 
-<p align="center">
-  <a href="https://github.com/JonnyBurger/remotion-logo">
-    <img src="https://github.com/JonnyBurger/remotion-logo/raw/main/withtitle/element-0.png">
-  </a>
-</p>
+## NFT Generation Logic
 
-Welcome to your Remotion project!
+  - Monster Type : index 0 - 1
+  - Colors : 3 Colors : index 2 - 4
+  - Element : Total 5 types : index 5
+  - Ratity : Total 5 types : index 6
+  - Luck : 99 max : index : 7 - 8
+  - element 2 and 3 : index : 9 - 10
+  - attacks 1 to 5 : index : 11 - 15
+  - hp potion : index : 16
+
 
 ## Commands
 

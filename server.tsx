@@ -10,6 +10,7 @@ import {
 	renderFrames,
 	stitchFramesToVideo,
 } from '@remotion/renderer';
+import cors from 'cors';
 import express from 'express';
 import fs from 'fs';
 import {Blob, NFTStorage} from 'nft.storage';
@@ -23,6 +24,7 @@ import {processDNA, uploadToIPFS} from './service';
 const client = new NFTStorage({token: NFT_STORAGE_API_KEY});
 
 const app = express();
+app.use(cors());
 const port = 8000;
 const compositionId = 'Frankenstein';
 

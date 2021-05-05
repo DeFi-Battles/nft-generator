@@ -52,7 +52,17 @@ const getNumFromRange = (
 		((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 	return Math.floor(res);
 };
-export const processDNA = (DNA: string) => {
+type returnDNA = [
+	NFT,
+	string,
+	string,
+	{
+		color1: number;
+		color2: number;
+		color3: number;
+	}
+];
+export const processDNA = (DNA: string): returnDNA => {
 	const monsterTypeIdx = Number(DNA.substr(0, 2)) % allMonstersList.length; // first 2 numbers
 	const monsterType = allMonstersList[monsterTypeIdx];
 	const [color1, color2, color3] = DNA.substr(2, 3).split('').map(Number);

@@ -26,7 +26,7 @@ const client = new NFTStorage({token: NFT_STORAGE_API_KEY});
 const app = express();
 app.use(cors());
 const port = 8000;
-const compositionId = 'Frankenstein';
+// const compositionId = 'Frankenstein';
 
 const cache = new Map<string, string>();
 
@@ -40,7 +40,6 @@ app.get('/', async (req, res) => {
 		const {dna} = req.query;
 		if (!dna) return res.status(400).send('Error Bad Request, send DNA');
 		const [NFT_INFO, monsterType, element, colors] = processDNA(String(dna));
-		const NFT_DATA = NFT_INFO as NFT;
 		console.log(NFT_INFO, monsterType, element, colors, 'NFT_INFO, colors');
 
 		const bundled = await bundle(
@@ -53,7 +52,7 @@ app.get('/', async (req, res) => {
 		const comps = await getCompositions(bundled);
 		const video = comps.find((c) => c.id === monsterType);
 		if (!video) {
-			throw new Error(`No video called ${compositionId}`);
+			throw new Error(`No video called ${monsterType}`);
 		}
 		res.set('content-type', 'application/json');
 
@@ -75,7 +74,7 @@ app.get('/', async (req, res) => {
 				colors,
 				element,
 			},
-			compositionId,
+			compositionId:monsterType,
 			imageFormat: 'jpeg',
 		});
 
@@ -91,8 +90,9 @@ app.get('/', async (req, res) => {
 		});
 		const videoCID: string = await uploadToIPFS(finalOutput);
 		const videoLink = `https://ipfs.io/ipfs/${videoCID}`;
-		NFT_DATA.image = videoLink;
-		const buf = Buffer.from(JSON.stringify(NFT_DATA));
+		console.log("video link ", videoLink);
+		NFT_INFO.image = videoLink;
+		const buf = Buffer.from(JSON.stringify(NFT_INFO));
 		const cid = await client.storeBlob(new Blob([buf]));
 		console.log(cid);
 		const cidLink = `https://ipfs.io/ipfs/${cid}`;

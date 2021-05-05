@@ -91,19 +91,19 @@ export const processDNA = (DNA: string): returnDNA => {
 	const hpPotion = Number(DNA[16]);
 	const attack1 = `${
 		allCurrentElemAttacks[atck1 % allCurrentElemAttacks.length]
-	} - ${getNumFromRange(atck1)} DP`;
+	} - ${getNumFromRange(atck1, 0, 9, 40, 50)} DP`;
 	const attack2 = `${
 		allCurrentElemAttacks[atck2 % allCurrentElemAttacks.length]
-	} - ${getNumFromRange(atck2)} DP`;
+	} - ${getNumFromRange(atck2, 0, 9, 20, 50)} DP`;
 	const attack3 = `${
 		allCurrentElemAttacks[atck3 % allCurrentElemAttacks.length]
-	} - ${getNumFromRange(atck3)} DP`;
+	} - ${getNumFromRange(atck3, 0, 9, 20, 50)} DP`;
 	const attack4 = `${
 		element2Attacks[atck4 % element2Attacks.length]
-	} - ${getNumFromRange(atck4)} DP`;
+	} - ${getNumFromRange(atck4, 0, 9, 1, 20)} DP`;
 	const attack5 = `${
 		element3Attacks[atck5 % element3Attacks.length]
-	} - ${getNumFromRange(atck5)} DP`;
+	} - ${getNumFromRange(atck5, 0, 9, 1, 20)} DP`;
 	const hpPotionVal = `${getNumFromRange(hpPotion)} HP`;
 	const name = getRandomName();
 	const description = `${name} is a ${getAdjective()} NFT Monster ready for Battles.`;

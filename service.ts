@@ -99,6 +99,10 @@ export const processDNA = (DNA: string) => {
 	const description = `${name} is a ${getAdjective()} NFT Monster ready for Battles.`;
 	const attributes = [];
 	attributes.push({
+		trait_type: 'DNA',
+		value: DNA,
+	});
+	attributes.push({
 		trait_type: 'familia',
 		value: monsterType,
 	});

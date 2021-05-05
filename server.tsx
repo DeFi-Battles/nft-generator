@@ -51,7 +51,7 @@ app.get('/', async (req, res) => {
 			}
 		);
 		const comps = await getCompositions(bundled);
-		const video = comps.find((c) => c.id === compositionId);
+		const video = comps.find((c) => c.id === monsterType);
 		if (!video) {
 			throw new Error(`No video called ${compositionId}`);
 		}
